@@ -50,13 +50,12 @@ BEGIN {
 }
 
 BEG_G {
-  printf( "var sys = require('sys'),\n  graphviz = require('graphviz');\n\n");
   // Directed 
   g_direct = isDirect($);
   if( g_direct == 0 ) {
-    printf( "var graph_%s = graphviz.graph( \"%s\" );\n", rubyfy($.name), rubyfy($.name) );
+    printf( "var graph_%s = graph( \"%s\" );\n", rubyfy($.name), rubyfy($.name) );
   } else {
-    printf( "var graph_%s = graphviz.digraph( \"%s\" );\n", rubyfy($.name), rubyfy($.name) );
+    printf( "var graph_%s = digraph( \"%s\" );\n", rubyfy($.name), rubyfy($.name) );
   }
   // Strict
   g_strict = isStrict($);

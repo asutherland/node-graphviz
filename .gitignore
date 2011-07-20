@@ -3,3 +3,4 @@ doc
 pkg
 test/output/
 documentation.html
+node_modules/
